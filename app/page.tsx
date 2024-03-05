@@ -1,11 +1,11 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { Anchor } from '@mantine/core';
+import { Nav } from '@/components/Nav/Nav';
 
 export default function HomePage() {
   return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
+    <div>
+      <Nav />
+      <Anchor href="/sign-in">Sign in</Anchor>
+    </div>
   );
 }
