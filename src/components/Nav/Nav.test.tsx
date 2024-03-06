@@ -1,4 +1,4 @@
-import { render, screen } from '@/test-utils';
+import { render, screen } from '@/config/test-utils';
 import { Nav } from './Nav';
 
 describe('Logo', () => {
