@@ -1,4 +1,4 @@
-import { RegisterForm } from '@/app/sign-up/register-form';
+import { LoginForm } from '@/fragments/login-form/LoginForm';
 import { Nav } from '@/components/Nav/Nav';
 
 export default function RegisterPage() {
@@ -6,7 +6,7 @@ export default function RegisterPage() {
     <>
       <Nav />
       <main>
-        <RegisterForm />
+        <LoginForm />
       </main>
     </>
   );
