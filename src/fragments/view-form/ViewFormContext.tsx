@@ -2,9 +2,9 @@
 
 import { createContext, ReactNode } from 'react';
 import { Field } from '@/chunks/build-form/FieldsContext';
-import { Tables } from '@/types/database.types';
+import { Json, Tables } from '@/types/database.types';
 
-type Form = Tables<'forms'> & { fields: Field[] };
+type Form = Tables<'forms'> & { fields: Field[] | Json };
 interface ProviderProps {
   children: ReactNode;
   value: Form;
