@@ -2,16 +2,18 @@
 
 import { createContext, ReactNode } from 'react';
 import { Field } from '@/chunks/build-form/FieldsContext';
-import { Json, Tables } from '@/types/database.types';
+import { Tables } from '@/types/database.types';
 
-type Form = Tables<'forms'> & { fields: Field[] | Json };
+type FormRecord = Tables<'forms'> & { fields: Field[] };
+
 interface ProviderProps {
   children: ReactNode;
-  value: Form;
+  value: FormRecord;
 }
 
-const ViewFormContext = createContext<Form>({} as Form);
+const ViewFormContext = createContext<FormRecord>({} as FormRecord);
 
 const ViewFormProvider = (props: ProviderProps) => <ViewFormContext.Provider {...props} />;
 
 export { ViewFormContext, ViewFormProvider };
+export type { FormRecord };

@@ -2,7 +2,7 @@ import { Title } from '@mantine/core';
 import { supabase } from '@/config/supabase';
 import Error from '@/fragments/error/Error';
 import ViewForm from '@/fragments/view-form/ViewForm';
-import { ViewFormProvider } from '@/fragments/view-form/ViewFormContext';
+import { FormRecord, ViewFormProvider } from '@/fragments/view-form/ViewFormContext';
 
 interface Props {
   params: {
@@ -16,7 +16,7 @@ export default async function Page(props: Props) {
 
   if (res.error) return <Error />;
 
-  const [form] = res.data;
+  const [form] = res.data as FormRecord[];
 
   return (
     <main>
