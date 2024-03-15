@@ -1,9 +1,12 @@
 import '@mantine/core/styles.css';
+import { Box, ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Mulish } from 'next/font/google';
 import React, { PropsWithChildren } from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { ReactQueryClientProvider } from '@/components/ReactQueryclientProvider';
+import { ToastContainer } from 'react-toastify';
+import { Nav } from '@/chunks/nav/Nav';
+import { ReactQueryClientProvider } from '@/components/ReactQueryClientProvider';
 import { theme } from '@/config/theme';
+import 'react-toastify/dist/ReactToastify.css';
 
 const mulish = Mulish({
   variable: '--font-mulish',
@@ -24,8 +27,12 @@ export default function RootLayout(props: PropsWithChildren) {
         </head>
         <body>
           <MantineProvider theme={theme}>
-            <div className={mulish.variable}>{props.children}</div>
+            <div className={mulish.variable}>
+              <Nav />
+              <Box m={16}>{props.children}</Box>
+            </div>
           </MantineProvider>
+          <ToastContainer />
         </body>
       </html>
     </ReactQueryClientProvider>

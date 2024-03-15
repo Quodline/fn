@@ -24,13 +24,16 @@
     "@mantine/hooks": "7.6.1",
     "@mantinex/mantine-logo": "^1.0.1",
     "@next/bundle-analyzer": "^14.0.1",
+    "@supabase/supabase-js": "^2.39.7",
     "@tabler/icons-react": "^2.40.0",
     "@tanstack/react-query": "^5.25.0",
-    "firebase": "^10.8.1",
+    "immer": "^10.0.4",
     "mantine-form-yup-resolver": "^2.0.0",
     "next": "14.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-toastify": "^10.0.4",
+    "use-immer": "^0.9.0",
     "yup": "^1.3.3"
   },
   "devDependencies": {

@@ -1,11 +1,9 @@
-import { Anchor } from '@mantine/core';
-import { Nav } from '@/components/Nav/Nav';
+import Dashboard from '@/fragments/dashboard/Dashboard';
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <div>
-      <Nav />
-      <Anchor href="/sign-in">Sign in</Anchor>
-    </div>
+    <main>
+      <Dashboard />
+    </main>
   );
 }

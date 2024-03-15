@@ -1,13 +1,11 @@
-import { LoginForm } from '@/fragments/login-form/LoginForm';
-import { Nav } from '@/components/Nav/Nav';
+import { Title } from '@mantine/core';
+import { LoginForm } from '@/chunks/login-form/LoginForm';
 
-export default function RegisterPage() {
+export default function Page() {
   return (
-    <>
-      <Nav />
-      <main>
-        <LoginForm />
-      </main>
-    </>
+    <main>
+      <Title order={3}>Sign in</Title>
+      <LoginForm />
+    </main>
   );
 }
